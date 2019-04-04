@@ -1,6 +1,11 @@
 # Container for building and testing cmake-examples with default cmake v3.5.1
 FROM ubuntu:16.04
 MAINTAINER vertigo235
+
+ENV OS="Linux"
+ENV JAVA_TOOL_OPTIONS="-Djava.net.preferIPv4Stack=true"
+ENV GPG_TTY=$(tty)
+
 RUN apt-get update && apt-get install -y build-essential \
     sudo \
     cmake \
