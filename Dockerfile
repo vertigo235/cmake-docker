@@ -6,6 +6,7 @@ ENV OS="Linux"
 ENV OSTYPE="linux-gnu"
 ENV JAVA_TOOL_OPTIONS="-Djava.net.preferIPv4Stack=true"
 ENV GPG_TTY=$(tty)
+ENV TERM="xterm"
 
 RUN apt-get update && apt-get install -y build-essential \
     sudo \
